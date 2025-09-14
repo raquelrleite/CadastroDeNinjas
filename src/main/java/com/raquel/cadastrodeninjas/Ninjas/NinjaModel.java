@@ -16,8 +16,11 @@ public class NinjaModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY) //Como vai implementar o ID(de um em um, começando do 100, etc)
     private Long id;
     private String nome;
+    @Column(unique = true) // email unico, nao pode ter item repetido.
     private String email;
+    private String imgUrl;
     private int idade;
+
     // um ninja tem uma unica missão, muitos ninjas para uma missao
     @ManyToOne
     @JoinColumn(name = "missoes_id") //Chave estrangeira

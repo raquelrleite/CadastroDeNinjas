@@ -14,7 +14,8 @@ public class MissoesModel {
     private Long id;
     private String nome;
     private String dificuldade;
-    @OneToMany(mappedBy = "missoes") // uma missao pode ter muitos ninjas
+    @OneToMany(mappedBy = "missoes") // uma missao para muitos ninjas
+    // toda vez que usar um relacionamento entre duas tabelas, precisa mapear as tabelas, voce vai passar o noome da coluna que esta trabalhando lá
     private List<NinjaModel> ninjas;
 
 
